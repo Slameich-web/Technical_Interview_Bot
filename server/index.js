@@ -3,8 +3,8 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 const token = process.env.TOKEN
 const bot = new TelegramApi(token, { polling: true })
-const url = 'https://funny-kleicha-8671e1.netlify.app/'
-const htmlPage = 'https://funny-kleicha-8671e1.netlify.app/questions'
+const url = 'https://cozy-concha-362660.netlify.app/'
+const htmlPage = 'https://cozy-concha-362660.netlify.app/questions'
 bot.setMyCommands([
     { command: '/start', description: 'start' },
     { command: '/info', description: 'info' }
