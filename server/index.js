@@ -4,6 +4,12 @@ dotenv.config()
 const token = process.env.TOKEN
 const bot = new TelegramApi(token, { polling: true })
 const url = 'https://cozy-concha-362660.netlify.app/'
+const urlHtml = 'https://cozy-concha-362660.netlify.app/html'
+const urlCss = 'https://cozy-concha-362660.netlify.app/css'
+const urlJs = 'https://cozy-concha-362660.netlify.app/javascript'
+const urlReact = 'https://cozy-concha-362660.netlify.app/react'
+const urlVue = 'https://cozy-concha-362660.netlify.app/vue'
+
 bot.setMyCommands([
     { command: '/start', description: 'start' },
     { command: '/info', description: 'info' }
@@ -20,8 +26,8 @@ const start = () => {
             return bot.sendMessage(chatId, 'Выбирай список вопросов и качай свои скилы', {
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "HTML", web_app: { url } }, { text: "CSS", web_app: { url } }, { text: "JavaScript", web_app: { url } }],
-                        [{ text: "React", web_app: { url } }, { text: "Vue", web_app: { url } }]
+                        [{ text: "HTML", web_app: { urlHtml } }, { text: "CSS", web_app: { urlCss } }, { text: "JavaScript", web_app: { urlJs } }],
+                        [{ text: "React", web_app: { urlReact } }, { text: "Vue", web_app: { urlVue } }]
                     ]
                 }
             })

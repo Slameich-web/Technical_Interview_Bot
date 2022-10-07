@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
+import { HtmlPage } from "./components/category/HtmlPage";
 import { Header } from "./components/header/Header";
 import { Main } from "./components/main";
-import { Questions } from "./components/questions";
 import { useTelegram } from "./hooks/useTelegram";
 function App() {
   const { TG } = useTelegram();
@@ -15,7 +15,7 @@ function App() {
       <Header />
       <Routes>
         <Route index element={<Main />} />
-        <Route path="questions" element={<Questions />} />
+        <Route path="html" element={<HtmlPage />} />
       </Routes>
     </div>
   );
