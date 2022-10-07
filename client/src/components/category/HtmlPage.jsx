@@ -12,8 +12,8 @@ export const HtmlPage = () => {
     <div>
       <h2>Добро пожаловать на страницу с вопросами по HTML</h2>
       <h4>Тут ты можешь выбрать сложность вопросов и дополнительные темы</h4>
-      <Collapse defaultActiveKey={["1"]}>
-        <Panel header="This is panel header 1" key="1">
+      <Collapse>
+        <Panel header="Вопрос ВопросВ опросВоп росВопрос Вопрос Вопрос" key="1">
           <p>{text}</p>
         </Panel>
       </Collapse>
