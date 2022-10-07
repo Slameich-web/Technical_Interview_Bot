@@ -1,7 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Button } from "../button/Button";
-import { Link } from "react-router-dom";
 export const HtmlPage = () => {
   return (
     <div>
