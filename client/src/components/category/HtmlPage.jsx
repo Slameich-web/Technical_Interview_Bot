@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { html } from "../../../data/html";
+import { html } from "../../data/html";
 export const HtmlPage = () => {
   return (
     <div>
