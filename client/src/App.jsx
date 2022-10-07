@@ -12,7 +12,6 @@ function App() {
   }, [TG]);
   return (
     <div className="App">
-      <Header />
       <Routes>
         <Route index element={<Main />} />
         <Route path="html" element={<HtmlPage />} />
