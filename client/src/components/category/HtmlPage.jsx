@@ -5,9 +5,9 @@ export const HtmlPage = () => {
   return (
     <div>
       <h2>Добро пожаловать на страницу с вопросами по HTML</h2>
-      <h4>Тут ты можешь выбрать сложность вопросов и дополнительные темы</h4>
-      <Button>Для стажеров</Button>
-      <Button>Для junior</Button>
+      <h4>Выбирай свой уровень и готовься к собеседованию</h4>
+      <Button>Cтажеров</Button>
+      <Button>Junior</Button>
     </div>
   );
 };
