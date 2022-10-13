@@ -14,6 +14,8 @@ function App() {
         <Route path="html" element={<Page title={"HTML"} />} />
         <Route path="css" element={<Page title={"CSS"} />} />
         <Route path="javascript" element={<Page title={"JavaScript"} />} />
+        <Route path="react" element={<Page title={"React"} />} />
+        <Route path="vue" element={<Page title={"Vue"} />} />
       </Routes>
     </div>
   );

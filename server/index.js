@@ -21,8 +21,8 @@ const start = () => {
             return bot.sendMessage(chatId, 'Выбирай список вопросов и качай свои скилы', {
                 reply_markup: {
                     inline_keyboard: [
-                        [{ text: "HTML", web_app: { url: url + 'html' } }, { text: "CSS", web_app: { url: url + 'html' } }, { text: "JavaScript", web_app: { url: url + 'html' } }],
-                        [{ text: "React", web_app: { url: url + 'html' } }, { text: "Vue", web_app: { url: url + 'html' } }]
+                        [{ text: "HTML", web_app: { url: url + 'html' } }, { text: "CSS", web_app: { url: url + 'css' } }, { text: "JavaScript", web_app: { url: url + 'javascript' } }],
+                        [{ text: "React", web_app: { url: url + 'react' } }, { text: "Vue", web_app: { url: url + 'vue' } }]
                     ]
                 }
             })
