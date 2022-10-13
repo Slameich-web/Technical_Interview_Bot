@@ -1,5 +1,5 @@
 import React from "react";
-import "Page.css";
+import "./Page.css";
 import { Button } from "../button/Button";
 export const HtmlPage = () => {
   return (
