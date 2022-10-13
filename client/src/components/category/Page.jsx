@@ -1,10 +1,10 @@
 import React from "react";
 import "./Page.css";
 import { Button } from "../button/Button";
-export const HtmlPage = () => {
+export const Page = ({ title }) => {
   return (
     <div>
-      <h2>Добро пожаловать на страницу с вопросами по HTML</h2>
+      <h2>Добро пожаловать на страницу с вопросами по {title}</h2>
       <br />
       <h3>Выбирай свой уровень и готовься к собеседованию</h3>
       <div className="choice_level_button">
