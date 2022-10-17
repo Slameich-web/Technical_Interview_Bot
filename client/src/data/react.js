@@ -1,7 +1,7 @@
 export const react = [
     {
         id: "0",
-        title: "Основна",
+        title: "Основы",
         description: 'Данный блок расчитан на ознакомление с библиотекой ReactJS',
         questions: [
             {
