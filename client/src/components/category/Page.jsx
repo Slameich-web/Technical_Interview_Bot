@@ -11,12 +11,9 @@ export const Page = ({ title }) => {
   if (category) {
     return (
       <div>
+        asd
         {category.map((item, index) => {
-          return (
-            <>
-              <div key={index}>item.title</div>
-            </>
-          );
+          return console.log(item);
         })}
         {TG.MainButton.show()}
       </div>
