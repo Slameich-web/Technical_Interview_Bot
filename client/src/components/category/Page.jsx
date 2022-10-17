@@ -12,10 +12,10 @@ export const Page = ({ title }) => {
     console.log(category);
     return (
       <div>
-        {category.map(({ title, answer, id }) => {
+        {category.map(({ title }, index) => {
           return (
             <>
-              <div key={id}>{title}</div>
+              <div key={index}>{title}</div>
             </>
           );
         })}
