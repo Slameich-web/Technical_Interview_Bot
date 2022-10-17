@@ -4,6 +4,7 @@ import { Button } from "../button/Button";
 
 export const Page = ({ title }) => {
   const data = React.lazy(() => import(`../../data/${title}`));
+  console.log(data);
   return (
     <div>
       <div>{title}</div>
