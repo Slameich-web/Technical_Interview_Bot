@@ -7,7 +7,7 @@ export const Page = ({ title }) => {
     <div>
       {react.map(({ title, description }) => {
         return (
-          <div>
+          <div className="choice_level_button">
             <Button>{title}</Button>
             <p>{description}</p>
           </div>
