@@ -5,6 +5,7 @@ import { react } from "../../data/react";
 export const Page = ({ title }) => {
   return (
     <div>
+      <div>{title}</div>
       {react.map(({ title, description }) => {
         return (
           <div className="choice_level_button">
