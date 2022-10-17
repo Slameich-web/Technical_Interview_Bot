@@ -1,4 +1,6 @@
 .tg_button {
+  width: 140px;
+  height: 50px;
   padding: 10px 15px;
   background: var(--tg-theme-button-color);
   color: var(--tg-theme-button-text-color);
@@ -6,7 +8,6 @@
   cursor: pointer;
   border: 1px solid black;
   border-radius: 12px;
-  width: 100px;
   font-size: 17px;
   margin: 0px 4px;
 }
