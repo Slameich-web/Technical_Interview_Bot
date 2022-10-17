@@ -10,8 +10,8 @@ export const Page = ({ title }) => {
   if (category) {
     return (
       <div>
-        {category.map(({ title }) => {
-          return <div>{title}</div>;
+        {category.map(({ answer }) => {
+          return <div>{answer}</div>;
         })}
         {TG.MainButton.show()}
       </div>
