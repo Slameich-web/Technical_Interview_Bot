@@ -11,8 +11,12 @@ export const Page = ({ title }) => {
     console.log(category);
     return (
       <div>
-        {category.map(({ answer }) => {
-          return <div>{answer}</div>;
+        {category.map(({ title, answer, id }) => {
+          return (
+            <>
+              <div key={id}>{title}</div> {answer}
+            </>
+          );
         })}
         {TG.MainButton.show()}
       </div>
