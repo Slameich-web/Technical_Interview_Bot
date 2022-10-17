@@ -8,6 +8,7 @@ export const Page = ({ title }) => {
   const { TG } = useTelegram();
   const [category, setCategory] = useState(undefined);
   if (category) {
+    console.log(category);
     return (
       <div>
         {category.map(({ answer }) => {
