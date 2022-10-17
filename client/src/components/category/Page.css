@@ -1,4 +1,5 @@
 .choice_level_button {
+  border: 1px solid black;
   display: flex;
   text-align: center;
   margin-top: 12px;
