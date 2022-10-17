@@ -7,6 +7,7 @@ import { useTelegram } from "../../hooks/useTelegram";
 export const Page = ({ title }) => {
   const { TG } = useTelegram();
   const [category, setCategory] = useState(undefined);
+  TG.WebApp.onEvent("mainButtonClicked", () => setCategory(undefined));
   if (category) {
     console.log(category);
     return (
