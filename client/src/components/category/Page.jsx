@@ -9,13 +9,12 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   TG.onEvent("mainButtonClicked", () => setCategory(undefined));
   if (category) {
-    console.log(category);
     return (
       <div>
-        {category.map(({ title }, index) => {
+        {category.map((item, index) => {
           return (
             <>
-              <div key={index}>{title}</div>
+              <div key={index}>{item.title}</div>
             </>
           );
         })}
