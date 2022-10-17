@@ -11,25 +11,24 @@ export const Page = ({ title }) => {
   if (category) {
     return (
       <div>
-        asd
         {category.map((item, index) => {
           return console.log(item);
         })}
-        {TG.MainButton.show()}
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <div>{title}</div>
+        {react.map(({ title, description, questions }) => {
+          return (
+            <div className="choice_level_button">
+              <Button onClick={() => setCategory(questions)}>{title}</Button>
+              <p>{description}</p>
+            </div>
+          );
+        })}
       </div>
     );
   }
-  return (
-    <div>
-      <div>{title}</div>
-      {react.map(({ title, description, questions }) => {
-        return (
-          <div className="choice_level_button">
-            <Button onClick={() => setCategory(questions)}>{title}</Button>
-            <p>{description}</p>
-          </div>
-        );
-      })}
-    </div>
-  );
 };
