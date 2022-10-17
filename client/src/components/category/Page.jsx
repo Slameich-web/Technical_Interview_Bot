@@ -5,8 +5,13 @@ import { react } from "../../data/react";
 export const Page = ({ title }) => {
   return (
     <div>
-      {react.map(({ title }) => {
-        return <Button>{title}</Button>;
+      {react.map(({ title, description }) => {
+        return (
+          <div>
+            <Button>{title}</Button>
+            <p>{description}</p>
+          </div>
+        );
       })}
     </div>
   );
