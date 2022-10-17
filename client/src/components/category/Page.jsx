@@ -12,23 +12,26 @@ export const Page = ({ title }) => {
     return (
       <div>
         {category.map((item, index) => {
-          return console.log(item);
-        })}
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <div>{title}</div>
-        {react.map(({ title, description, questions }) => {
           return (
-            <div className="choice_level_button">
-              <Button onClick={() => setCategory(questions)}>{title}</Button>
-              <p>{description}</p>
-            </div>
+            <>
+              <div key={index}>{item.title}</div>
+            </>
           );
         })}
       </div>
     );
   }
+  return (
+    <div>
+      <div>{title}</div>
+      {react.map(({ title, description, questions }) => {
+        return (
+          <div className="choice_level_button">
+            <Button onClick={() => setCategory(questions)}>{title}</Button>
+            <p>{description}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
 };
