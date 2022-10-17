@@ -15,7 +15,7 @@ export const Page = ({ title }) => {
         {category.map(({ title, answer, id }) => {
           return (
             <>
-              <div key={id}>{title}</div> {answer}
+              <div key={id}>{title}</div>
             </>
           );
         })}
