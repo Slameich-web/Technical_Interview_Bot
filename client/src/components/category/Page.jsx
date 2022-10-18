@@ -9,6 +9,7 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   TG.onEvent("mainButtonClicked", () => setCategory(undefined));
   if (category) {
+    TG.MainButton.show();
     return (
       <div>
         {category.map((item, index) => {
