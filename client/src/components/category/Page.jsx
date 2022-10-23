@@ -27,7 +27,7 @@ export const Page = ({ title }) => {
           <h2>{category[activeQuestion].title}</h2>
           <div>{category[activeQuestion].answer}</div>
         </div>
-        <>localStorage.length {localStorage.getItem(activeQuestion)}</>
+        <>localStorage.length {localStorage.getItem("activeQuestion")}</>
       </div>
     );
   }
