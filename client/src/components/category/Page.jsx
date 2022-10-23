@@ -4,9 +4,17 @@ import { Button } from "../button/Button";
 import { react } from "../../data/react";
 import { useState } from "react";
 import { useTelegram } from "../../hooks/useTelegram";
+import { useEffect } from "react";
 export const Page = ({ title }) => {
   const { TG } = useTelegram();
   const [category, setCategory] = useState(undefined);
+  const [activeQuestion, setActiveQuestion] = useState(0);
+  useEffect(() => {
+    const activeQuestionCheck = localStorage.getItem(activeQuestion);
+    if (activeQuestionCheck) {
+      setActiveQuestion(activeQuestionCheck);
+    }
+  }, [activeQuestion]);
   TG.onEvent("mainButtonClicked", () => setCategory(undefined));
   if (category) {
     TG.MainButton.show();
@@ -21,6 +29,7 @@ export const Page = ({ title }) => {
             </>
           );
         })}
+        <>localStorage.length {localStorage.length}</>
       </div>
     );
   }
