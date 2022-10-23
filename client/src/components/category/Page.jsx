@@ -18,7 +18,7 @@ export const Page = ({ title }) => {
     setActiveQuestion(activeQuestionCheck);
     localStorage.setItem("activeQuestion", activeQuestion);
   }, [activeQuestion]);
-  TG.onEvent("mainButtonClicked", () => setCategory((prev) => prev + 1));
+  TG.onEvent("mainButtonClicked", () => setCategory(1));
   if (category) {
     TG.MainButton.show();
     return (
