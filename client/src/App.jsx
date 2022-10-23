@@ -7,7 +7,6 @@ function App() {
   const { TG } = useTelegram();
   useEffect(() => {
     TG.ready();
-    TG.onToggleButton.text = "Следующий вопрос";
   }, [TG]);
   return (
     <div className="App">
