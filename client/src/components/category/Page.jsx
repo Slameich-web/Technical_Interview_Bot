@@ -12,6 +12,7 @@ export const Page = ({ title }) => {
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
   if (category) {
     TG.MainButton.show();
+    TG.MainButton.setText("text");
     return (
       <div>
         <div>
