@@ -12,7 +12,7 @@ export const Page = ({ title }) => {
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
   if (category) {
     TG.MainButton.show();
-    TG.MainButton.setText("text");
+    TG.MainButton.setText(`Перейти к вопросу № ${activeQuestion}`);
     return (
       <div>
         <div>
