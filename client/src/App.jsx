@@ -8,11 +8,6 @@ function App() {
   useEffect(() => {
     TG.ready();
   }, [TG]);
-  useEffect(() => {
-    if (localStorage.getItem("activeQuestionReact")) {
-      localStorage.setItem("activeQuestionReact", 0);
-    }
-  }, []);
   return (
     <div className="App">
       <Routes>
