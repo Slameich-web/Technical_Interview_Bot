@@ -12,7 +12,7 @@ export const Page = ({ title }) => {
   useEffect(() => {
     localStorage.setItem("activeQuestion", activeQuestion);
   }, [activeQuestion]);
-  TG.onEvent("mainButtonClicked", () => setActiveQuestion(1));
+  TG.onEvent("mainButtonClicked", () => setActiveQuestion((prev) => prev + 1));
   if (category) {
     TG.MainButton.show();
     return (
