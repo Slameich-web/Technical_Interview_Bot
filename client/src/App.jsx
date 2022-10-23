@@ -9,7 +9,7 @@ function App() {
     TG.ready();
   }, [TG]);
   useEffect(() => {
-    if (localStorage.getItem("activeQuestionReact") === undefined) {
+    if (localStorage.getItem("activeQuestionReact")) {
       localStorage.setItem("activeQuestionReact", 0);
     }
   }, []);

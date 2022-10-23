@@ -11,7 +11,7 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   const [activeQuestion, setActiveQuestion] = useState(0);
   useEffect(() => {
-    setActiveQuestion(localStorage.getItem("activeQuestionReact" ?? 0));
+    setActiveQuestion(localStorage.getItem("activeQuestionReact"));
   }, []);
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
   if (category) {
