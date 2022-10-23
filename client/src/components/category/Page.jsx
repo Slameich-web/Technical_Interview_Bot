@@ -10,12 +10,15 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   const [activeQuestion, setActiveQuestion] = useState(0);
   useEffect(() => {
-    const activeQuestionCheck = localStorage.getItem(activeQuestion);
-    if (activeQuestionCheck) {
-      setActiveQuestion(activeQuestionCheck);
+    let activeQuestionCheck = localStorage.getItem("activeQuestion");
+    if (!activeQuestionCheck) {
+      localStorage.setItem("activeQuestion", 0);
+      activeQuestionCheck = 0;
     }
+    setActiveQuestion(activeQuestionCheck);
+    localStorage.setItem("activeQuestion", activeQuestion);
   }, [activeQuestion]);
-  TG.onEvent("mainButtonClicked", () => setCategory(undefined));
+  TG.onEvent("mainButtonClicked", () => setCategory((prev) => prev + 1));
   if (category) {
     TG.MainButton.show();
     return (
@@ -24,7 +27,7 @@ export const Page = ({ title }) => {
           <h2>{category[activeQuestion].title}</h2>
           <div>{category[activeQuestion].answer}</div>
         </div>
-        <>localStorage.length {localStorage.length}</>
+        <>localStorage.length {localStorage.getItem(activeQuestion)}</>
       </div>
     );
   }
