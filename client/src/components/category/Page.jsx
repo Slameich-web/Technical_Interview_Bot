@@ -20,15 +20,10 @@ export const Page = ({ title }) => {
     TG.MainButton.show();
     return (
       <div>
-        {category.map((item, index) => {
-          return (
-            <>
-              <div onClick={() => alert(item.answer)} key={index}>
-                {item.title}
-              </div>
-            </>
-          );
-        })}
+        <div>
+          <h2>{category[activeQuestion].title}</h2>
+          <div>{category[activeQuestion].answer}</div>
+        </div>
         <>localStorage.length {localStorage.length}</>
       </div>
     );
