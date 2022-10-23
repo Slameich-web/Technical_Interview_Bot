@@ -30,6 +30,15 @@ const start = () => {
                 }
             })
         }
+        if (text === '/roadmap') {
+            return bot.sendMessage(chatId, 'Тут ты можешь посмотреть какие скилы нужны для твоей профессии', {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{ text: "Frontend developer (React)", web_app: { url: url + 'roadmapReact' } }],
+                    ]
+                }
+            })
+        }
         return bot.sendMessage(chatId, '.....')
     })
 }
