@@ -10,8 +10,8 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   const [activeQuestion, setActiveQuestion] = useState(0);
   useEffect(() => {
-    if (localStorage.getItem("activeQuestion") === undefined) {
-      localStorage.setItem("activeQuestion", 0);
+    if (!localStorage.getItem("activeQuestion")) {
+      localStorage.setItem("activeQuestion", activeQuestion);
     }
     let activeQuestionCheck = localStorage.getItem("activeQuestion");
     localStorage.setItem("activeQuestion", activeQuestion);
