@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "./Page.css";
 import { Button } from "../button/Button";
@@ -10,8 +11,8 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   const [activeQuestion, setActiveQuestion] = useState(0);
   useEffect(() => {
-    localStorage.setItem("activeQuestion", 1);
-  }, [activeQuestion]);
+    setActiveQuestion(localStorage.getItem("activeQuestionReact"));
+  }, []);
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
   if (category) {
     TG.MainButton.show();
@@ -21,7 +22,7 @@ export const Page = ({ title }) => {
           <h2>{category[activeQuestion].title}</h2>
           <div>{category[activeQuestion].answer}</div>
         </div>
-        <>localStorage.length {localStorage.getItem("activeQuestion")}</>
+        <>localStorage.length {localStorage.getItem("activeQuestionReact")}</>
       </div>
     );
   }
