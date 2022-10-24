@@ -13,6 +13,10 @@ export const Page = ({ title }) => {
   if (category) {
     TG.MainButton.show();
     TG.MainButton.setText(`Перейти к вопросу № ${activeQuestion + 2}`);
+    if (activeQuestion === category.length) {
+      TG.onEvent("mainButtonClicked", () => alert("qqqqq"));
+      TG.MainButton.setText(`Перейти к списку вопросов`);
+    }
     return (
       <div>
         <div>

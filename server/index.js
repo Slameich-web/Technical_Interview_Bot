@@ -8,19 +8,20 @@ const url = 'https://cozy-concha-362660.netlify.app/'
 
 bot.setMyCommands([
     { command: '/start', description: 'start' },
-    { command: '/info', description: 'info' }
+    { command: '/roadmap', description: 'roadmap' },
+    { command: '/questions', description: 'questions' }
 ])
 const start = () => {
     bot.on('message', async message => {
         const { text, chat } = message
         const chatId = chat.id
-        if (text === '/info') {
+        if (text === '/start') {
             return bot.sendMessage(chatId, `Привет ${chat.first_name}!!
 В этом боте ты сможешь ознакомиться с большим количеством вопросов которые ты можешь встретить на  собеседовании на позицию Frontend разработчика, также можешь посмотреть мои рекомендации к изучению вопросов, или изучить интересующие тебя темы. 
 Важно!!!!
 Этот бот не обучит вас писать код и программировать, на собеседование вам будут задавать теоретические вопросы, с которыми этот бот вам и поможет.`)
         }
-        if (text === '/start') {
+        if (text === '/questions') {
             return bot.sendMessage(chatId, 'Выбирай список вопросов и качай свои скилы', {
                 reply_markup: {
                     inline_keyboard: [
