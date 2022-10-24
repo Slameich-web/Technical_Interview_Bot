@@ -13,6 +13,8 @@ export const Page = ({ title }) => {
   if (category) {
     TG.MainButton.show();
     TG.MainButton.setText(`Перейти к вопросу № ${activeQuestion + 2}`);
+    TG.BackButton.show();
+    TG.onEvent("backButtonClicked", () => setCategory(undefined));
     if (activeQuestion === category.length - 1) {
       TG.onEvent("mainButtonClicked", () => setActiveQuestion(0));
       TG.MainButton.setText(`Перейти к списку вопросов`);
@@ -21,7 +23,8 @@ export const Page = ({ title }) => {
       <div>
         <div>
           <h2>
-            № {activeQuestion} {category[activeQuestion].title}
+            Вопрос № {activeQuestion + 1} <br />
+            {category[activeQuestion].title}
           </h2>
           <div>{category[activeQuestion].answer}</div>
         </div>
