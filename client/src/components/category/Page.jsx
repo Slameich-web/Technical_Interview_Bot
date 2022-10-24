@@ -20,7 +20,9 @@ export const Page = ({ title }) => {
     return (
       <div>
         <div>
-          <h2>{category[activeQuestion].title}</h2>
+          <h2>
+            № {activeQuestion} {category[activeQuestion].title}
+          </h2>
           <div>{category[activeQuestion].answer}</div>
         </div>
       </div>
