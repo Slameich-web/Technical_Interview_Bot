@@ -10,11 +10,16 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   const [activeQuestion, setActiveQuestion] = useState(0);
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
+  const backButtonFunction = () => {
+    setActiveQuestion(0);
+    setCategory(undefined);
+    TG.MainButton.hide();
+  };
   if (category) {
     TG.MainButton.show();
     TG.MainButton.setText(`Перейти к вопросу № ${activeQuestion + 2}`);
     TG.BackButton.show();
-    TG.onEvent("backButtonClicked", () => setCategory(undefined));
+    TG.onEvent("backButtonClicked", () => backButtonFunction());
     if (activeQuestion === category.length - 1) {
       TG.onEvent("mainButtonClicked", () => setActiveQuestion(0));
       TG.MainButton.setText(`Перейти к списку вопросов`);
