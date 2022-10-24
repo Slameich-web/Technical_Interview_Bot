@@ -16,7 +16,7 @@ export const Page = ({ title }) => {
     TG.MainButton.hide();
     TG.BackButton.hide();
   };
-  if (category && !activeQuestion) {
+  if (category && activeQuestion !== undefined) {
     return (
       <div>
         {category.map((item) => {
