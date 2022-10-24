@@ -16,6 +16,17 @@ export const Page = ({ title }) => {
     TG.MainButton.hide();
     TG.BackButton.hide();
   };
+  if (category && !activeQuestion) {
+    return (
+      <div>
+        {category.map((item) => {
+          return (
+            <div onClick={() => setActiveQuestion(item.id)}>{item.title}</div>
+          );
+        })}
+      </div>
+    );
+  }
   if (category) {
     TG.MainButton.show();
     TG.BackButton.show();
@@ -39,17 +50,7 @@ export const Page = ({ title }) => {
       </div>
     );
   }
-  if (category && !activeQuestion) {
-    return (
-      <div>
-        {category.map((item) => {
-          return (
-            <div onClick={() => setActiveQuestion(item.id)}>{item.title}</div>
-          );
-        })}
-      </div>
-    );
-  }
+
   return (
     <div>
       <div>{title}</div>
