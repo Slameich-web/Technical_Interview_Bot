@@ -5,6 +5,7 @@ import { Button } from "../button/Button";
 import { react } from "../../data/react";
 import { useState } from "react";
 import { useTelegram } from "../../hooks/useTelegram";
+
 export const Page = ({ title }) => {
   const { TG } = useTelegram();
   const [category, setCategory] = useState(undefined);
@@ -18,6 +19,7 @@ export const Page = ({ title }) => {
   };
   if (category && activeQuestion === undefined) {
     TG.MainButton.hide();
+    TG.BackButton.show();
     return (
       <div>
         {category.map((item) => {
