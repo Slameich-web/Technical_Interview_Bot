@@ -21,9 +21,7 @@ export const Page = ({ title }) => {
       <div>
         {category.map((item) => {
           return (
-            <div
-              onClick={() => setActiveQuestion(Number.parseInt(item.id), 10)}
-            >
+            <div onClick={() => setActiveQuestion(Number(item.id))}>
               {item.title}
             </div>
           );
