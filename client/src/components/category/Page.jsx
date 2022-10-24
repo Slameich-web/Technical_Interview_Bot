@@ -37,7 +37,8 @@ export const Page = ({ title }) => {
 
     if (activeQuestion === category.length - 1) {
       TG.onEvent("mainButtonClicked", () => setActiveQuestion(undefined));
-      TG.MainButton.show();
+      TG.MainButton.hide();
+      TG.BackButton.hide();
       TG.MainButton.setText(`Перейти к списку вопросов`);
     }
 
