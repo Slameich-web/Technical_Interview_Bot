@@ -11,7 +11,7 @@ export const Page = ({ title }) => {
   const [activeQuestion, setActiveQuestion] = useState(undefined);
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
   const backButtonFunction = () => {
-    setActiveQuestion(0);
+    setActiveQuestion(undefined);
     setCategory(undefined);
     TG.MainButton.hide();
     TG.BackButton.hide();
