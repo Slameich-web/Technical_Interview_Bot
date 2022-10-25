@@ -1,13 +1,13 @@
 import React from "react";
 
-export const Question = (activeQuestion, category) => {
+export const Question = (props) => {
   <div>
     <div>
       <h2>
-        Вопрос № {activeQuestion + 1} <br />
-        {category[activeQuestion].title}
+        Вопрос № {props.activeQuestion + 1} <br />
+        {props.category[props.activeQuestion].title}
       </h2>
-      <div>{category[activeQuestion].answer}</div>
+      <div>{props.category[props.activeQuestion].answer}</div>
     </div>
   </div>;
 };
