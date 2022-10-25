@@ -5,6 +5,7 @@ import { Button } from "../button/Button";
 import { react } from "../../data/react";
 import { useState } from "react";
 import { useTelegram } from "../../hooks/useTelegram";
+import { Question } from "../question/Question";
 
 export const Page = ({ title }) => {
   const { TG } = useTelegram();
@@ -44,17 +45,7 @@ export const Page = ({ title }) => {
       TG.MainButton.setText(`Перейти к списку вопросов`);
     }
 
-    return (
-      <div>
-        <div>
-          <h2>
-            Вопрос № {activeQuestion + 1} <br />
-            {category[activeQuestion].title}
-          </h2>
-          <div>{category[activeQuestion].answer}</div>
-        </div>
-      </div>
-    );
+    return <Question activeQuestion={activeQuestion} category={category} />;
   }
 
   return (
