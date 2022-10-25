@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import { useTelegram } from "../../hooks/useTelegram";
 
 const backButtonFunction = (TG, setActiveQuestion, setCategory) => {
