@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Question = ({ activeQuestion, category }) => {
+export const Question = (activeQuestion, category) => {
   <div>
     <div>
       <h2>
