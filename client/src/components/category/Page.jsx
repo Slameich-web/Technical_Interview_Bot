@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import "./Page.css";
 import { Button } from "../button/Button";

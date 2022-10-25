@@ -22,13 +22,11 @@ export const Question = ({
   TG.onEvent("backButtonClicked", () =>
     backButtonFunction(TG, setActiveQuestion, setCategory)
   );
-  useEffect(() => {
-    if (activeQuestion === category.length - 1) {
-      TG.onEvent("mainButtonClicked", () => setActiveQuestion(undefined));
-      TG.MainButton.show();
-      TG.MainButton.setText(`Перейти к списку вопросов`);
-    }
-  }, [TG, activeQuestion, category.length, setActiveQuestion]);
+  if (activeQuestion === category.length - 1) {
+    TG.onEvent("mainButtonClicked", () => setActiveQuestion(undefined));
+    TG.MainButton.show();
+    TG.MainButton.setText(`Перейти к списку вопросов`);
+  }
 
   return (
     <div>
