@@ -1,12 +1,4 @@
 import React from "react";
-import { useTelegram } from "../../hooks/useTelegram";
-
-const backButtonFunction = (TG, setActiveQuestion, setCategory) => {
-  setActiveQuestion(undefined);
-  setCategory(undefined);
-  TG.MainButton.hide();
-  TG.BackButton.hide();
-};
 
 export const Question = ({ activeQuestion, category }) => {
   <div>
