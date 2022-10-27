@@ -5,4 +5,5 @@
 }
 .App {
   margin: 10px 12px;
+  color: var(--tg-theme-text-color);
 }
