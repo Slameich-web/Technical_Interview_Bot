@@ -58,7 +58,7 @@ export const Page = ({ title }) => {
 
   return (
     <div>
-      <div>{title}</div>
+      <h3>Эта страница вопросов по {title}</h3>
       {react.map(({ title, description, questions }) => {
         return (
           <div className="choice_level_button">
