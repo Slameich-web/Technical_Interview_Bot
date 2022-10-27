@@ -1,6 +1,5 @@
 .choice_level_button {
   padding: 5px;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 120px 1fr;
   margin-top: 12px;
@@ -12,4 +11,45 @@
 .choice_level_title {
   font-size: 17px;
   font-style: italic;
+}
+.title_question_wrapper {
+  counter-reset: li;
+  list-style: none;
+  font: 14px "Trebuchet MS", "Lucida Sans";
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+.title_question {
+  position: relative;
+  display: block;
+  padding: 0.4em 0.4em 0.4em 2em;
+  margin: 0.5em 0;
+  background: #dad2ca;
+  color: #444;
+  text-decoration: none;
+  border-radius: 0.3em;
+  transition: 0.3s ease-out;
+}
+.title_question:hover {
+  background: #e9e4e0;
+}
+.title_question:hover:before {
+  transform: rotate(360deg);
+}
+.title_question:before {
+  content: counter(li);
+  counter-increment: li;
+  position: absolute;
+  left: -1.3em;
+  top: 50%;
+  margin-top: -1.3em;
+  background: #8fd4c1;
+  height: 2em;
+  width: 2em;
+  line-height: 2em;
+  border: 0.3em solid white;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 2em;
+  transition: all 0.3s ease-out;
 }

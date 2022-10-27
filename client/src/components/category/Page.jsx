@@ -21,13 +21,18 @@ export const Page = ({ title }) => {
     TG.BackButton.show();
     return (
       <div>
-        {category.map((item) => {
-          return (
-            <div onClick={() => setActiveQuestion(Number(item.id))}>
-              {item.title}
-            </div>
-          );
-        })}
+        <ol className="title_question_wrapper">
+          {category.map((item) => {
+            return (
+              <li
+                className="title_question"
+                onClick={() => setActiveQuestion(Number(item.id))}
+              >
+                {item.title}
+              </li>
+            );
+          })}
+        </ol>
       </div>
     );
   }
