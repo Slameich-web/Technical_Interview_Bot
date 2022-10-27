@@ -20,8 +20,8 @@ export const Page = ({ title }) => {
     TG.MainButton.hide();
     TG.BackButton.show();
     return (
-      <div>
-        <ol className="title_question_wrapper">
+      <div className="title_question_wrapper">
+        <ol className="title_question_block">
           {category.map((item) => {
             return (
               <li

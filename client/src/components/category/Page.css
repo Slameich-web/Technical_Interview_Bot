@@ -13,6 +13,9 @@
   font-style: italic;
 }
 .title_question_wrapper {
+  margin: 10px 6px;
+}
+.title_question_block {
   counter-reset: li;
   list-style: none;
   font: 14px "Trebuchet MS", "Lucida Sans";
@@ -20,6 +23,7 @@
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 .title_question {
+  cursor: pointer;
   position: relative;
   display: block;
   padding: 0.4em 0.4em 0.4em 2em;
