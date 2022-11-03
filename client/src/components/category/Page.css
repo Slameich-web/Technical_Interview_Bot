@@ -57,28 +57,3 @@
   border-radius: 2em;
   transition: all 0.3s ease-out;
 }
-.list_question {
-  overflow: hidden;
-  font-size: 16px;
-}
-.list_question dt,
-.holiday dd {
-  padding: 0 1em 0 0.875em;
-  color: #4c565c;
-  box-sizing: border-box;
-}
-dt {
-  width: 30%;
-  float: left;
-  clear: right;
-  background: #d3e6dd;
-  font-weight: bold;
-}
-dd {
-  width: 70%;
-  float: right;
-  margin-left: 0;
-  margin-bottom: 0.3125em;
-  border: 1px solid #becfc7;
-  border-left: none;
-}

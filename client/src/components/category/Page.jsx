@@ -1,5 +1,6 @@
 import React from "react";
 import "./Page.css";
+import { Button } from "../button/Button";
 import { react } from "../../data/react";
 import { useState } from "react";
 import { useTelegram } from "../../hooks/useTelegram";
@@ -63,18 +64,14 @@ export const Page = ({ title }) => {
   return (
     <div>
       <h3>Эта страница вопросов по {title}</h3>
-      <div>
-        <dl class="list_question">
-          {react.map(({ title, description, questions }) => {
-            return (
-              <>
-                <dt onClick={() => setCategory(questions)}>{title}</dt>
-                <dd>{description}</dd>
-              </>
-            );
-          })}
-        </dl>
-      </div>
+      {react.map(({ title, description, questions }) => {
+        return (
+          <div className="choice_level_button">
+            <Button onClick={() => setCategory(questions)}>{title}</Button>
+            <p>{description}</p>
+          </div>
+        );
+      })}
     </div>
   );
 };
