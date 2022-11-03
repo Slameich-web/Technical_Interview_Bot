@@ -63,9 +63,7 @@
 }
 .list_question dt,
 .holiday dd {
-  height: 2.5em;
-  line-height: 2.5em;
-  padding: 0 0.625em 0 0.875em;
+  padding: 0 1em 0 0.875em;
   color: #4c565c;
   box-sizing: border-box;
 }
