@@ -64,14 +64,18 @@ export const Page = ({ title }) => {
   return (
     <div>
       <h3>Эта страница вопросов по {title}</h3>
-      {react.map(({ title, description, questions }) => {
-        return (
-          <div className="choice_level_button">
-            <Button onClick={() => setCategory(questions)}>{title}</Button>
-            <p>{description}</p>
-          </div>
-        );
-      })}
+      <div>
+        <dl class="list_question">
+          {react.map(({ title, description, questions }) => {
+            return (
+              <>
+                <dt onClick={() => setCategory(questions)}>{title}</dt>
+                <dd>{description}</dd>
+              </>
+            );
+          })}
+        </dl>
+      </div>
     </div>
   );
 };
