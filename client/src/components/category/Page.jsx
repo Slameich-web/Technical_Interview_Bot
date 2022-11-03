@@ -1,6 +1,5 @@
 import React from "react";
 import "./Page.css";
-import { Button } from "../button/Button";
 import { react } from "../../data/react";
 import { useState } from "react";
 import { useTelegram } from "../../hooks/useTelegram";
