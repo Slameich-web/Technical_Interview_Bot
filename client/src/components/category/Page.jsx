@@ -10,7 +10,7 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   const [activeQuestion, setActiveQuestion] = useState(undefined);
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
-  const myParam = window.location.href.split("#", [0]).split(".app/", [1]);
+  const myParam = window.location.href.split("#", [0]);
   const backButtonFunction = () => {
     setActiveQuestion(undefined);
     setCategory(undefined);
