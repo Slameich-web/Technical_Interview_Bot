@@ -10,6 +10,7 @@ export const Page = ({ title }) => {
   const [category, setCategory] = useState(undefined);
   const [activeQuestion, setActiveQuestion] = useState(undefined);
   TG.onEvent("mainButtonClicked", () => setActiveQuestion(activeQuestion + 1));
+  const myParam = window.location.href;
   const backButtonFunction = () => {
     setActiveQuestion(undefined);
     setCategory(undefined);
@@ -22,6 +23,7 @@ export const Page = ({ title }) => {
     return (
       <div className="title_question_wrapper">
         <ol className="title_question_block">
+          {myParam}
           {category.map((item) => {
             return (
               <li
