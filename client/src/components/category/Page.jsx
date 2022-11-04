@@ -23,7 +23,6 @@ export const Page = ({ title }) => {
     return (
       <div className="title_question_wrapper">
         <ol className="title_question_block">
-          {myParam}
           {category.map((item) => {
             return (
               <li
